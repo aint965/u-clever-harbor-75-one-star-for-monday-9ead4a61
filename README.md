@@ -4,8 +4,8 @@
 
 # One Star for Monday
 
-A one-star review of Monday, written as though Monday were a restaurant — a single line of plain text, 22 words, no explanation attached.
+A one-star review of Monday, written as though Monday were a restaurant — a single line of plain text, 24 words, no explanation attached.
 
 ## How it works
 
-`main.ts` is a dependency-free Node 22 program. When run, it takes the output directory from its first argument (falling back to `/output`), creates it, and writes the review line to `<outdir>/entry.txt` with no trailing newline. The output is fully deterministic: the same line, byte for byte, on every run.
+`main.ts` is a dependency-free Node 22 program. When run, it takes the output directory from its first argument (falling back to `/output`), creates it, and writes the review line to `<outdir>/entry.txt` with no trailing newline. Before writing, it checks the line against the competition caps and refuses to write it if it ever exceeds 25 words or 180 characters. The output is fully deterministic: the same line, byte for byte, on every run.
